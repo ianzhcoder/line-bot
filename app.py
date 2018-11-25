@@ -44,15 +44,18 @@ def handle_message(event):
     r_msg = "對不起請輸入現在的心情..."
 
 
-    pid = random.randint(1,2)
-    sid = random.randint(1,527)
     if "給個表情吧" in msg:
         sticker_message = StickerSendMessage(
         #https://devdocs.line.me/files/sticker_list.pdf
         # package_id=1,
         # sticker_id=1
-        package_id=pid,
-        sticker_id=sid
+        package_id=1,
+        sticker_id=random.randint(1,430)
+        )
+    elif "換個表情吧" in msg:
+        sticker_message = StickerSendMessage(
+        package_id=2,
+        sticker_id=random.randint(1,527)
         )
 
         line_bot_api.reply_message(
