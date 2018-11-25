@@ -1,7 +1,7 @@
 #web app
 #SDK : https://github.com/line/line-bot-sdk-python
 
-
+import random
 from flask import Flask, request, abort
 
 from linebot import (
