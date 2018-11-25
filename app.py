@@ -60,20 +60,20 @@ def handle_message(event):
         return
 
     if msg in ['hi','Hi','HI']:
-        r = "HI~很高興見到你..."
+        r_msg = "HI~很高興見到你..."
     elif msg == "我好開心":
-        r = "記住開心的感覺喔..."
+        r_msg = "記住開心的感覺喔..."
     elif msg == "我好生氣":
-        r = "So What?"
+        r_msg = "So What?"
     elif msg == "我好難過":
-        r = "你現在感覺如何？"
+        r_msg = "你現在感覺如何？"
     elif msg == "我好孤單":
-        r = "我一直都在..."
+        r_msg = "我一直都在..."
 
 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=msg))
+        TextSendMessage(text=r_msg))
 
 
 if __name__ == "__main__":
