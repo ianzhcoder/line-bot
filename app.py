@@ -58,11 +58,11 @@ def handle_message(event):
         sticker_id=random.randint(1,527)
         )
 
-        line_bot_api.reply_message(
-            event.reply_token,
-            sticker_message)
+    line_bot_api.reply_message(
+        event.reply_token,
+        sticker_message)
 
-        return
+    return
 
     if msg in ['hi','Hi','HI']:
         r_msg = "HI~很高興見到你..."
