@@ -46,10 +46,11 @@ def handle_message(event):
 
     if "給個表情吧" in msg:
         sticker_message = StickerSendMessage(
-        package_id=1,
-        sticker_id=450
-        #package_id=random.randint(1,4),
-        #sticker_id=random.randint(1,500)
+        #https://devdocs.line.me/files/sticker_list.pdf
+        # package_id=1,
+        # sticker_id=1
+        package_id=random.randint(1,2),
+        sticker_id=random.randint(1,527)
         )
 
         line_bot_api.reply_message(
